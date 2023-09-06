@@ -10,7 +10,8 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { reducer } from './reducers';
+import { reducer } from './contacts/contactReducers';
+// import { authReducer } from './auth/authReducer';
 
 const persistConfig = {
   key: 'root',

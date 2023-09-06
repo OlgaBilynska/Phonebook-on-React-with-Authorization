@@ -11,7 +11,7 @@ import {
   ErrorMessageForm,
   FieldForm,
 } from './ContactForm.styled';
-import { addContact } from './../../redux/operations';
+import { contactOperations } from 'redux/contacts';
 
 const initialValues = {
   name: '',
@@ -40,7 +40,7 @@ const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
-    dispatch(addContact(values));
+    dispatch(contactOperations.addContact(values));
     resetForm();
   };
 

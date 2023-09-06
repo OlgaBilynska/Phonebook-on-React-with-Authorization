@@ -11,15 +11,15 @@ import {
   ContactTitle,
   ContactTotal,
 } from './App.styled';
-import { getContacts } from 'redux/selectors';
-import { fetchContacts } from 'redux/operations';
+import { contactOperations, contactSelectors } from 'redux/contacts';
+// import { fetchContacts } from 'redux/contacts/contactOperations';
 
 export function App() {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(contactSelectors.getContacts);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(contactOperations.fetchContacts());
   }, [dispatch]);
 
   return (

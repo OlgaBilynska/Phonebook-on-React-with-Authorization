@@ -2,8 +2,9 @@ import React from 'react';
 import { ContactItem, ContactContainer } from './Contact.styled';
 import { Button } from 'components/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts, getFilter } from 'redux/selectors';
-import { deleteContact } from 'redux/operations';
+// import { getContacts, getFilter } from 'redux/contacts/contactSelectors';
+// import { deleteContact } from 'redux/contacts/contactOperations';
+import { contactOperations, contactSelectors } from 'redux/contacts';
 
 const getVisibleContacts = (contacts, filter) => {
   if (filter) {
@@ -17,8 +18,8 @@ const getVisibleContacts = (contacts, filter) => {
 };
 
 const Contact = () => {
-  const contacts = useSelector(getContacts);
-  const filter = useSelector(getFilter);
+  const contacts = useSelector(contactSelectors.getContacts);
+  const filter = useSelector(contactSelectors.getFilter);
   const dispatch = useDispatch();
   const visibleContacts = getVisibleContacts(contacts, filter);
 
@@ -28,7 +29,10 @@ const Contact = () => {
         <ContactItem>
           {name} : {number}
         </ContactItem>
-        <Button type="button" onClick={() => dispatch(deleteContact(id))}>
+        <Button
+          type="button"
+          onClick={() => dispatch(contactOperations.deleteContact(id))}
+        >
           Delete
         </Button>
       </ContactContainer>

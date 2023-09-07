@@ -18,10 +18,10 @@ export function App() {
   const { isRefreshing } = useAuth();
   console.log('refreshing', isRefreshing);
 
-  // useEffect(() => {
-  //   dispatch(refreshUser());
-  //   console.log('dispatch', dispatch);
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(refreshUser());
+    console.log('dispatch', dispatch);
+  }, [dispatch]);
 
   return isRefreshing ? (
     <b>Refreshing user...</b>

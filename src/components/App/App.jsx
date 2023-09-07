@@ -14,7 +14,7 @@ const LoginPage = lazy(() => import('../../pages/LoginPage'));
 const ContactPage = lazy(() => import('../../pages/ContactPage'));
 
 export function App() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
   console.log('refreshing', isRefreshing);
 

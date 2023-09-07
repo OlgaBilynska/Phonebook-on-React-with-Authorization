@@ -10,7 +10,7 @@ const contactSlice = createSlice({
   },
   extraReducers: builder => {
     builder
-      .addCase(fetchContacts.fulfilled, (,,state, action) => {
+      .addCase(fetchContacts.fulfilled, (state, action) => {
         state.items = action.payload;
         state.isLoading = false;
         state.error = null;

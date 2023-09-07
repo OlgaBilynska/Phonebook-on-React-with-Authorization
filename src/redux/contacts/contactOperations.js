@@ -4,9 +4,11 @@ import * as API from '../API';
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
   async (_, { rejectWithValue }) => {
+    console.log('thunk');
     try {
-      const contacts = await API.fetchContacts();
-      return contacts;
+      const response = await API.fetchContacts();
+      console.log('contacts', response.data);
+      return response.data;
     } catch (error) {
       return rejectWithValue(error);
     }

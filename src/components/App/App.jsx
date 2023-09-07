@@ -1,23 +1,11 @@
 import React, { lazy } from 'react';
-// import ContactForm from '../ContactForm/ContactForm';
-// import Contacts from '../Contacts/Contacts';
-// import Filter from '../Filter/Filter';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useAuth } from 'hooks';
-
-// import {
-//   Container,
-//   PhonebookTitle,
-//   ContactTitle,
-//   ContactTotal,
-// } from './App.styled';
-// import { contactOperations, contactSelectors } from 'redux/contacts';
 import { Layout } from 'components/Layout';
 import { RestrictedRoute } from 'components/RestrictedRoute';
 import { PrivateRoute } from 'components/PrivateRoute';
-// import { fetchContacts } from 'redux/contacts/contactOperations';
 import { refreshUser } from 'redux/auth/authOperations';
 
 const HomePage = lazy(() => import('./../../pages/HomePage'));

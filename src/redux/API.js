@@ -41,6 +41,6 @@ export async function logOut() {
 }
 
 export async function refresh() {
-  const { data } = await axios.get('/users/me');
+  const { data } = await axios.get('/users/current');
   return data;
 }

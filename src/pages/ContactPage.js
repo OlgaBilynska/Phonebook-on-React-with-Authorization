@@ -9,6 +9,8 @@ import { useEffect } from 'react';
 export default function ContactPage() {
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
+  console.log('isl', isLoading);
+  console.log('d', dispatch);
 
   useEffect(() => dispatch(fetchContacts()), [dispatch]);
 
@@ -18,7 +20,7 @@ export default function ContactPage() {
         <title>Your contacts</title>
       </Helmet>
       <ContactForm />
-      <div>{isLoading && 'Request in progress...'}</div>
+      {/* {isLoading && <p>Request in progress...</p>} */}
       <Contacts />
     </>
   );

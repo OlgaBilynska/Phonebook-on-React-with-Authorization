@@ -11,9 +11,7 @@ export const clearAuthHeader = () => {
 };
 
 export async function fetchContacts() {
-  console.log('api');
   const { data } = await axios.get('/contacts');
-  console.log('data', data);
   return data;
 }
 

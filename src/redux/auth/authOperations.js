@@ -7,6 +7,7 @@ export const register = createAsyncThunk(
     try {
       const registeredUser = await API.signUp(credentials);
       API.setAuthHeader(registeredUser.token);
+      console.log('rUser', registeredUser);
       return registeredUser;
     } catch (error) {
       return rejectWithValue(error.message);

@@ -2,8 +2,6 @@ import React from 'react';
 import { ContactItem, ContactContainer } from './Contact.styled';
 import { Button } from 'components/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
-// import { getContacts, getFilter } from 'redux/contacts/contactSelectors';
-// import { deleteContact } from 'redux/contacts/contactOperations';
 import { contactOperations, contactSelectors } from 'redux/contacts';
 
 const getVisibleContacts = (contacts, filter) => {

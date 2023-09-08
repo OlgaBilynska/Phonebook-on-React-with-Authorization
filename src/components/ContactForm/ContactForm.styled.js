@@ -3,7 +3,7 @@ import { Form, Field, ErrorMessage } from 'formik';
 import { Button } from 'components/Button/Button';
 
 export const FormWrapper = styled(Form)`
-  margin-top: 10px;
+  margin-top: 30px;
 `;
 
 export const ButtonBigger = styled(Button)`

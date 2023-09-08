@@ -15,11 +15,9 @@ const ContactPage = lazy(() => import('../../pages/ContactPage'));
 export function App() {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
-  console.log('refreshing', isRefreshing);
 
   useEffect(() => {
     dispatch(refreshUser());
-    console.log('dispatch', dispatch);
   }, [dispatch]);
 
   return isRefreshing ? (
@@ -54,14 +52,5 @@ export function App() {
         />
       </Route>
     </Routes>
-
-    // <Container>
-    //   <PhonebookTitle>Phonebook</PhonebookTitle>
-    //   <ContactForm />
-    //   <ContactTitle>Contacts</ContactTitle>
-    //   <Filter />
-    //   <Contacts />
-    //   <ContactTotal>Number of contacts: {contacts.length}</ContactTotal>
-    // </Container>
   );
 }

@@ -9,9 +9,9 @@ import {
 export const HomeInfo = () => {
   return (
     <HomeWrapper>
-      <HomeTitle>ContactsConnect</HomeTitle>
+      <HomeTitle>Stay Connected</HomeTitle>
       <TextWrapper>
-        <p>With "ContactsConnect," managing your contacts is a breeze:</p>
+        <p>With "Stay connected," managing your contacts is a breeze:</p>
         <MainPoints>
           <Point>
             <b>Effortless Organization</b> : Categorize your contacts easily, so
